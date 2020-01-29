@@ -1,0 +1,287 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>说明 &mdash; Lang-Shell 1.0.0 文档</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Lang-Shell
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">说明</a><ul>
+<li><a class="reference internal" href="#mac">Mac 安装</a></li>
+<li><a class="reference internal" href="#id2">使用快速工具来初始化项目</a></li>
+<li><a class="reference internal" href="#html">生成Html</a></li>
+</ul>
+</li>
+</ul>
+</div>
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Lang-Shell</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>说明</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/readme.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>说明<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>本文使用 <a class="reference external" href="http://www.sphinx-doc.org/en/master/index.html">Sphinx Doc</a> 生成</p>
+<div class="section" id="mac">
+<h2>Mac 安装<a class="headerlink" href="#mac" title="永久链接至标题">¶</a></h2>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sphinx</span>
+$ brew install python3
+$ pip3 install -U Sphinx
+
+<span class="c1"># markdown</span>
+$ pip3 install --upgrade recommonmark
+
+<span class="c1"># theme</span>
+$ pip3 install sphinx_rtd_theme
+$ pip3 install msmb_theme
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>使用快速工具来初始化项目<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sphinx-quickstart
+
+欢迎使用 Sphinx 2.3.1 快速配置工具。
+
+请输入接下来各项设置的值（如果方括号中指定了默认值，直接
+按回车即可使用默认值）。
+
+已选择根路径：.
+
+布置用于保存 Sphinx 输出的构建目录，有两种选择。
+一是在根路径下创建“_build”目录，二是在根路径下创建“source”
+和“build”两个独立的目录。
+&gt; 独立的源文件和构建目录（y/n） [n]: 
+
+项目名称会出现在文档的许多地方。
+&gt; 项目名称: Lang-Shell
+&gt; 作者名称: Duoli
+&gt; 项目发行版本 []: 1.0.0
+
+If the documents are to be written in a language other than English,
+you can select a language here by its language code. Sphinx will then
+translate text that it generates into that language.
+
+For a list of supported codes, see
+https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-language.
+&gt; 项目语种 [en]: zh
+
+创建文件 ./conf.py。
+创建文件 ./index.rst。
+创建文件 ./Makefile。
+创建文件 ./make.bat。
+
+完成：已创建初始目录结构。
+
+你现在可以填写主文档文件 ./index.rst 并创建其他文档源文件了。 用 Makefile 构建文档，像这样：
+ make builder
+此处的“builder”是支持的构建器名，比如 html、latex 或 linkcheck。
+</pre></div>
+</div>
+</div>
+<div class="section" id="html">
+<h2>生成Html<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ make html
+
+正在运行 Sphinx v2.3.1
+正在加载翻译 [zh]... 完成
+制作输出目录... 完成
+构建 [mo]： 0 个 po 文件的目标文件已过期
+构建 [html]： 1 个源文件的目标文件已过期
+更新环境: [新配置] 已添加 1，0 已更改，0 已移除
+阅读源... [100%] index                                                                                                                                     
+查找当前已过期的文件... 没有找到
+pickling环境... 完成
+检查一致性... 完成
+准备文件... 完成
+写入输出... [100%] index                                                                                                                                    
+generating indices...  genindex完成
+writing additional pages...  search完成
+复制静态文件... ... 完成
+copying extra files... 完成
+dumping search index in Chinese (code: zh)... 完成
+dumping object inventory... 完成
+构建 成功.
+
+HTML 页面保存在 _build/html 目录。
+</pre></div>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># 生成</span>
+sphinx-build -b html <span class="nb">source</span> build
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Duoli
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

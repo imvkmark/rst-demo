@@ -8,13 +8,10 @@ Welcome to Lang-Shell's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: 索引:
+   :caption: 目录:
 
-   demo.rst
-   readme.md
-
-
-
+    demo.rst
+    readme.md
 
 Indices and tables
 ==================
