@@ -9,20 +9,20 @@ Shell 简介
 .. toctree::
    :maxdepth: 2
    :caption: 目录
+   :numbered:
 
-   shell/1.intro_简介.md
-   shell/2.syntax_基本语法.md
-   shell/3.variable_变量.md
-   shell/4.string_字串.md
-   shell/5.array_数组.md
-   shell/6.operator_运算符.md
-   shell/7.control_控制语句.md
-   shell/8.function_函数.md
-   shell/9.command_命令.md
+   shell/intro_简介
+   shell/syntax_基本语法
+   shell/variable_变量
+   shell/string_字串
+   shell/array_数组
+   shell/operator_运算符
+   shell/control_控制语句
+   shell/function_函数
+   shell/command_命令
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
