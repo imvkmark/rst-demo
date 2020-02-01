@@ -15,7 +15,7 @@ Ken Thompson 的 sh 是第一种 Unix Shell，Windows Explorer 是一个典型�
 什么是 shell 脚本
 ^^^^^^^^^^^^^^^^^
 
-Shell 脚本（shell script），是一种为 shell 编写的脚本程序，一般文件后缀为 ``.sh``\ 。
+Shell 脚本（shell script），是一种为 shell 编写的脚本程序，一般文件后缀为 ``.sh`` 。
 
 业界所说的 shell 通常都是指 shell 脚本，但 shell 和 shell script 是两个不同的概念。
 
@@ -36,14 +36,14 @@ Shell 的解释器种类众多，常见的有：
 指定脚本解释器
 ~~~~~~~~~~~~~~
 
-在 shell 脚本，\ ``#!`` 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 解释器。\ ``#!`` 被称作\ `shebang（也称为 Hashbang ） <https://zh.wikipedia.org/wiki/Shebang>`_\ 。
+在 shell 脚本， ``#!`` 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 解释器。 ``#!`` 被称作 `shebang（也称为 Hashbang ） <https://zh.wikipedia.org/wiki/Shebang>`_ 。
 
 所以，你应该会在 shell 中，见到诸如以下的注释：
 
 
 * 指定 sh 解释器
 
-.. code-block::
+.. code-block:: sh
 
    #!/bin/sh
 
@@ -54,9 +54,7 @@ Shell 的解释器种类众多，常见的有：
 
    #!/bin/bash
 
-..
-
-   **注意**
+.. hint::
 
    上面的指定解释器的方式是比较常见的，但有时候，你可能也会看到下面的方式：
 
@@ -75,9 +73,7 @@ shell 有交互和非交互两种模式。
 交互模式
 ~~~~~~~~
 
-..
-
-   简单来说，你可以将 shell 的交互模式理解为执行命令行。
+简单来说，你可以将 shell 的交互模式理解为执行命令行。
 
 
 看到形如下面的东西，说明 shell 处于交互模式下：
@@ -86,14 +82,12 @@ shell 有交互和非交互两种模式。
 
    user@host:~$
 
-接着，便可以输入一系列 Linux 命令，比如 ``ls``\ ，\ ``grep``\ ，\ ``cd``\ ，\ ``mkdir``\ ，\ ``rm`` 等等。
+接着，便可以输入一系列 Linux 命令，比如 ``ls`` ， ``grep`` ， ``cd`` ， ``mkdir`` ， ``rm`` 等等。
 
 非交互模式
 ~~~~~~~~~~
 
-..
-
-   简单来说，你可以将 shell 的非交互模式理解为执行 shell 脚本。
+简单来说，你可以将 shell 的非交互模式理解为执行 shell 脚本。
 
 
 在非交互模式下，shell 从文件或者管道中读取命令并执行。
@@ -109,13 +103,13 @@ shell 有交互和非交互两种模式。
    source /path/to/script.sh
    ./path/to/script.sh
 
-上面的例子中，\ ``script.sh``\ 是一个包含 shell 解释器可以识别并执行的命令的普通文本文件，\ ``sh``\ 和\ ``bash``\ 是 shell 解释器程序。你可以使用任何喜欢的编辑器创建\ ``script.sh``\ （vim，nano，Sublime Text, Atom 等等）。
+上面的例子中， ``script.sh`` 是一个包含 shell 解释器可以识别并执行的命令的普通文本文件， ``sh`` 和 ``bash`` 是 shell 解释器程序。你可以使用任何喜欢的编辑器创建 ``script.sh`` （vim，nano，Sublime Text, Atom 等等）。
 
-其中，\ ``source /path/to/script.sh`` 和 ``./path/to/script.sh`` 是等价的。
+其中， ``source /path/to/script.sh`` 和 ``./path/to/script.sh`` 是等价的。
 
-除此之外，你还可以通过\ ``chmod``\ 命令给文件添加可执行的权限，来直接执行脚本文件：
+除此之外，你还可以通过 ``chmod`` 命令给文件添加可执行的权限，来直接执行脚本文件：
 
-.. code-block::
+.. code-block:: sh
 
    chmod +x /path/to/script.sh #使脚本具有执行权限
    /path/to/test.sh
@@ -125,4 +119,4 @@ shell 有交互和非交互两种模式。
 .. include:: intro/hello-world.sh
    :code: sh
 
-上面的例子中，我们使用了一个很有用的命令\ ``echo``\ 来输出字符串到屏幕上。
+上面的例子中，我们使用了一个很有用的命令 ``echo`` 来输出字符串到屏幕上。

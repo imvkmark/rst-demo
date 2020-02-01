@@ -5,13 +5,13 @@
 解释器
 ^^^^^^
 
-前面虽然两次提到了\ ``#!`` ，但是本着重要的事情说三遍的精神，这里再强调一遍：
+前面虽然两次提到了 ``#!`` ，但是本着重要的事情说三遍的精神，这里再强调一遍：
 
-在 shell 脚本，\ ``#!`` 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 解释器。\ ``#!`` 被称作\ `shebang（也称为 Hashbang ） <https://zh.wikipedia.org/wiki/Shebang>`_\ 。
+在 shell 脚本， ``#!`` 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 解释器。 ``#!`` 被称作\ `shebang（也称为 Hashbang ） <https://zh.wikipedia.org/wiki/Shebang>`_ 。
 
-``#!`` 决定了脚本可以像一个独立的可执行文件一样执行，而不用在终端之前输入\ ``sh``\ , ``bash``\ , ``python``\ , ``php``\ 等。
+``#!`` 决定了脚本可以像一个独立的可执行文件一样执行，而不用在终端之前输入 ``sh`` , ``bash`` , ``python`` , ``php`` 等。
 
-.. code-block::
+.. code-block:: sh
 
    # 以下两种方式都可以指定 shell 解释器为 bash，第二种方式更好
    #!/bin/bash
@@ -28,146 +28,28 @@ shell 语法中，注释是特殊的语句，会被 shell 解释器忽略。
 * 单行注释 - 以 ``#`` 开头，到行尾结束。
 * 多行注释 - 以 ``:<<EOF`` 开头，到 ``EOF`` 结束。
 
-**:keyboard: 『示例源码』** `comment-demo.sh <https://github.com/dunwu/os-tutorial/tree/master/codes/shell/demos/comment-demo.sh>`_
-
-.. code-block::
-
-   #--------------------------------------------
-   # shell 注释示例
-   # author：zp
-   #--------------------------------------------
-
-   # echo '这是单行注释'
-
-   ########## 这是分割线 ##########
-
-   :<<EOF
-   echo '这是多行注释'
-   echo '这是多行注释'
-   echo '这是多行注释'
-   EOF
+.. include:: syntax/comment-demo.sh
+   :code: sh
 
 echo
 ^^^^
 
-echo 用于字符串的输出。
+用于字符串的输出。
 
-输出普通字符串：
-
-.. code-block::
-
-   echo "hello, world"
-   # Output: hello, world
-
-输出含变量的字符串：
-
-.. code-block::
-
-   echo "hello, \"zp\""
-   # Output: hello, "zp"
-
-输出含变量的字符串：
-
-.. code-block::
-
-   name=zp
-   echo "hello, \"${name}\""
-   # Output: hello, "zp"
-
-输出含换行符的字符串：
-
-.. code-block::
-
-   # 输出含换行符的字符串
-   echo "YES\nNO"
-   #  Output: YES\nNO
-
-   echo -e "YES\nNO" # -e 开启转义
-   #  Output:
-   #  YES
-   #  NO
-
-输出含不换行符的字符串：
-
-.. code-block::
-
-   echo "YES"
-   echo "NO"
-   #  Output:
-   #  YES
-   #  NO
-
-   echo -e "YES\c" # -e 开启转义 \c 不换行
-   echo "NO"
-   #  Output:
-   #  YESNO
-
-输出重定向至文件
-
-.. code-block::
-
-   echo "test" > test.txt
-
-输出执行结果
-
-.. code-block::
-
-   echo `pwd`
-   #  Output:(当前目录路径)
-
-**:keyboard: 『示例源码』** `echo-demo.sh <https://github.com/dunwu/os-tutorial/tree/master/codes/shell/demos/echo-demo.sh>`_
+.. include:: syntax/echo-demo.sh
+   :code: sh
 
 printf
 ^^^^^^
 
 printf 用于格式化输出字符串。
 
-默认，printf 不会像 echo 一样自动添加换行符，如果需要换行可以手动添加 ``\n``\ 。
+默认，printf 不会像 echo 一样自动添加换行符，如果需要换行可以手动添加 ``\n`` 。
 
-**:keyboard: 『示例源码』** `printf-demo.sh <https://github.com/dunwu/os-tutorial/tree/master/codes/shell/demos/printf-demo.sh>`_
+.. include:: syntax/print_f-demo.sh
+   :code: sh
 
-.. code-block::
 
-   # 单引号
-   printf '%d %s\n' 1 "abc"
-   #  Output:1 abc
-
-   # 双引号
-   printf "%d %s\n" 1 "abc"
-   #  Output:1 abc
-
-   # 无引号
-   printf %s abcdef
-   #  Output: abcdef(并不会换行)
-
-   # 格式只指定了一个参数，但多出的参数仍然会按照该格式输出
-   printf "%s\n" abc def
-   #  Output:
-   #  abc
-   #  def
-
-   printf "%s %s %s\n" a b c d e f g h i j
-   #  Output:
-   #  a b c
-   #  d e f
-   #  g h i
-   #  j
-
-   # 如果没有参数，那么 %s 用 NULL 代替，%d 用 0 代替
-   printf "%s and %d \n"
-   #  Output:
-   #   and 0
-
-   # 格式化输出
-   printf "%-10s %-8s %-4s\n" 姓名 性别 体重kg
-   printf "%-10s %-8s %-4.2f\n" 郭靖 男 66.1234
-   printf "%-10s %-8s %-4.2f\n" 杨过 男 48.6543
-   printf "%-10s %-8s %-4.2f\n" 郭芙 女 47.9876
-   #  Output:
-   #  姓名     性别   体重kg
-   #  郭靖     男      66.12
-   #  杨过     男      48.65
-   #  郭芙     女      47.99
 
 printf 的转义符
 ~~~~~~~~~~~~~~~
