@@ -9,7 +9,7 @@ bash 只支持一维数组。
 创建数组
 ^^^^^^^^
 
-.. code-block::
+.. code-block:: text
 
    # 创建数组的不同方式
    nums=([2]=2 [0]=0 [1]=1)
@@ -21,7 +21,7 @@ bash 只支持一维数组。
 
 * **访问数组的单个元素：**
 
-.. code-block::
+.. code-block:: text
 
    echo ${nums[1]}
    # Output: 1
@@ -29,7 +29,7 @@ bash 只支持一维数组。
 
 * **访问数组的所有元素：**
 
-.. code-block::
+.. code-block:: text
 
    echo ${colors[*]}
    # Output: red yellow dark blue
@@ -41,7 +41,7 @@ bash 只支持一维数组。
 
 为了将数组中每个元素单独一行输出，我们用 ``printf`` 命令：
 
-.. code-block::
+.. code-block:: text
 
    printf "+ %s\n" ${colors[*]}
    # Output:
@@ -52,7 +52,7 @@ bash 只支持一维数组。
 
 为什么\ ``dark``\ 和\ ``blue``\ 各占了一行？尝试用引号包起来：
 
-.. code-block::
+.. code-block:: text
 
    printf "+ %s\n" "${colors[*]}"
    # Output:
@@ -60,7 +60,7 @@ bash 只支持一维数组。
 
 现在所有的元素都在一行输出 —— 这不是我们想要的！让我们试试\ ``${colors[@]}``
 
-.. code-block::
+.. code-block:: text
 
    printf "+ %s\n" "${colors[@]}"
    # Output:
@@ -73,7 +73,7 @@ bash 只支持一维数组。
 
 * **访问数组的部分元素：**
 
-.. code-block::
+.. code-block:: text
 
    echo ${nums[@]:0:2}
    # Output:
@@ -84,7 +84,7 @@ bash 只支持一维数组。
 访问数组长度
 ^^^^^^^^^^^^
 
-.. code-block::
+.. code-block:: text
 
    echo ${#nums[*]}
    # Output:
@@ -95,7 +95,7 @@ bash 只支持一维数组。
 
 向数组中添加元素也非常简单：
 
-.. code-block::
+.. code-block:: text
 
    colors=(white "${colors[@]}" green black)
    echo ${colors[@]}
@@ -109,7 +109,7 @@ bash 只支持一维数组。
 
 用\ ``unset``\ 命令来从数组中删除一个元素：
 
-.. code-block::
+.. code-block:: text
 
    unset nums[0]
    echo ${nums[@]}

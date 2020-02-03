@@ -39,6 +39,14 @@ echo
 .. include:: syntax/echo-demo.sh
    :code: sh
 
+
+.. code-block:: sh
+
+   #------------- 输出重定向到文件 ------------
+   # 输出到 ../_output/syntax-text.txt 文件中
+   work_path=$(cd "$(dirname "$0")" && pwd)
+   echo "test" >"${work_path}/../_output/syntax-test.txt"
+
 printf
 ^^^^^^
 

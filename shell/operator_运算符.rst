@@ -43,7 +43,7 @@
 
 **:keyboard: 『示例源码』** `operator-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    x=10
    y=20
@@ -119,7 +119,7 @@
 
 **:keyboard: 『示例源码』** `operator-demo2.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo2.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    x=10
    y=20
@@ -196,7 +196,7 @@
 
 **:keyboard: 『示例源码』** `operator-demo3.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo3.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    x=10
    y=20
@@ -260,7 +260,7 @@
 
 **:keyboard: 『示例源码』** `operator-demo4.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo4.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    x=10
    y=20
@@ -317,7 +317,7 @@
 
 **:keyboard: 『示例源码』** `operator-demo5.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo5.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    x="abc"
    y="xyz"
@@ -419,7 +419,7 @@
 
 **:keyboard: 『示例源码』** `operator-demo6.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo6.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    file="/etc/hosts"
 

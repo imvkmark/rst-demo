@@ -4,7 +4,7 @@
 
 bash 函数定义语法如下：
 
-.. code-block::
+.. code-block:: text
 
    [ function ] funname [()] {
        action;
@@ -24,7 +24,7 @@ bash 函数定义语法如下：
 
 **:keyboard: 『示例源码』** `function-demo.sh <https://github.com/dunwu/os-tutorial/tree/master/codes/shell/demos//function/function-demo.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    #!/usr/bin/env bash
 
@@ -61,7 +61,7 @@ bash 函数定义语法如下：
 
 执行结果：
 
-.. code-block::
+.. code-block:: text
 
    $ ./function-demo.sh
    1) +
@@ -101,7 +101,7 @@ bash 函数定义语法如下：
 
 **:keyboard: 『示例源码』** `function-demo2.sh <https://github.com/dunwu/os-tutorial/tree/master/codes/shell/demos//function/function-demo2.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    #!/usr/bin/env bash
 
@@ -129,7 +129,7 @@ bash 函数定义语法如下：
 
 执行结果：
 
-.. code-block::
+.. code-block:: text
 
    $ ./function-demo2.sh
    第一个参数为空

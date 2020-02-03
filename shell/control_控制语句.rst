@@ -18,7 +18,7 @@
 
 ``if``\ 在使用上跟其它语言相同。如果中括号里的表达式为真，那么\ ``then``\ 和\ ``fi``\ 之间的代码会被执行。\ ``fi``\ 标志着条件代码块的结束。
 
-.. code-block::
+.. code-block:: text
 
    # 写成一行
    if [[ 1 -eq 1 ]]; then echo "1 -eq 1 result is: true"; fi
@@ -35,7 +35,7 @@
 
 同样，我们可以使用\ ``if..else``\ 语句，例如：
 
-.. code-block::
+.. code-block:: text
 
    if [[ 2 -ne 1 ]]; then
      echo "true"
@@ -48,7 +48,7 @@
 
 有些时候，\ ``if..else``\ 不能满足我们的要求。别忘了\ ``if..elif..else``\ ，使用起来也很方便。
 
-.. code-block::
+.. code-block:: text
 
    x=10
    y=20
@@ -70,7 +70,7 @@
 
 **:keyboard: 『示例源码』** `case-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/case-demo.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    exec
    case ${oper} in
@@ -109,7 +109,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 ``for``\ 与它在 C 语言中的姊妹非常像。看起来是这样：
 
-.. code-block::
+.. code-block:: text
 
    for arg in elem1 elem2 ... elemN
    do
@@ -120,13 +120,13 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 当然，我们还可以把\ ``for``\ 循环写在一行，但这要求\ ``do``\ 之前要有一个分号，就像下面这样：
 
-.. code-block::
+.. code-block:: text
 
    for i in {1..5}; do echo $i; done
 
 还有，如果你觉得\ ``for..in..do``\ 对你来说有点奇怪，那么你也可以像 C 语言那样使用\ ``for``\ ，比如：
 
-.. code-block::
+.. code-block:: text
 
    for (( i = 0; i < 10; i++ )); do
      echo $i
@@ -134,7 +134,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 当我们想对一个目录下的所有文件做同样的操作时，\ ``for``\ 就很方便了。举个例子，如果我们想把所有的\ ``.bash``\ 文件移动到\ ``script``\ 文件夹中，并给它们可执行权限，我们的脚本可以这样写：
 
-.. code-block::
+.. code-block:: text
 
    DIR=/home/zp
    for FILE in ${DIR}/*.sh; do
@@ -149,7 +149,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 ``while``\ 循环检测一个条件，只要这个条件为 *真*\ ，就执行一段命令。被检测的条件跟\ ``if..then``\ 中使用的\ `基元 <https://github.com/denysdovhan/bash-handbook/blob/master/translations/zh-CN/README.md#%E5%9F%BA%E5%85%83%E5%92%8C%E7%BB%84%E5%90%88%E8%A1%A8%E8%BE%BE%E5%BC%8F>`_\ 并无二异。因此一个\ ``while``\ 循环看起来会是这样：
 
-.. code-block::
+.. code-block:: text
 
    while [[ condition ]]
    do
@@ -160,7 +160,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 比如下面这个例子：
 
-.. code-block::
+.. code-block:: text
 
    ### 0到9之间每个数的平方
    x=0
@@ -187,7 +187,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 ``until``\ 循环跟\ ``while``\ 循环正好相反。它跟\ ``while``\ 一样也需要检测一个测试条件，但不同的是，只要该条件为 *假* 就一直执行循环：
 
-.. code-block::
+.. code-block:: text
 
    x=0
    until [[ ${x} -ge 5 ]]; do
@@ -208,7 +208,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 ``select``\ 循环帮助我们组织一个用户菜单。它的语法几乎跟\ ``for``\ 循环一致：
 
-.. code-block::
+.. code-block:: text
 
    select answer in elem1 elem2 ... elemN
    do
@@ -219,7 +219,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 一个可能的实例可能会是这样：
 
-.. code-block::
+.. code-block:: text
 
    #!/usr/bin/env bash
 
@@ -240,7 +240,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 运行这个脚本，会得到如下输出：
 
-.. code-block::
+.. code-block:: text
 
    $ ./my_script
    1) bower
@@ -266,7 +266,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 **:keyboard: 『示例源码』** `break-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/break-demo.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    # 查找 10 以内第一个能整除 2 和 3 的正整数
    i=1
@@ -281,7 +281,7 @@ Bash 中有四种循环：\ ``for``\ ，\ ``while``\ ，\ ``until``\ 和\ ``sele
 
 **:keyboard: 『示例源码』** `continue-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/continue-demo.sh>`_
 
-.. code-block::
+.. code-block:: text
 
    # 打印10以内的奇数
    for (( i = 0; i < 10; i ++ )); do

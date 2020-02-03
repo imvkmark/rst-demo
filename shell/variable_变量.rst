@@ -18,11 +18,11 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 声明变量
 ^^^^^^^^
 
-访问变量的语法形式为：\ ``${var}`` 和 ``$var`` 。
+访问变量的语法形式为： ``${var}`` 和 ``$var`` 。
 
 变量名外面的花括号是可选的，加不加都行，加花括号是为了帮助解释器识别变量的边界，所以推荐加花括号。
 
-.. code-block::
+.. code-block:: sh
 
    word="hello"
    echo ${word}
@@ -33,7 +33,7 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 
 使用 readonly 命令可以将变量定义为只读变量，只读变量的值不能被改变。
 
-.. code-block::
+.. code-block:: sh
 
    rword="hello"
    echo ${rword}
@@ -45,7 +45,7 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 
 使用 unset 命令可以删除变量。变量被删除后不能再次使用。unset 命令不能删除只读变量。
 
-.. code-block::
+.. code-block:: sh
 
    dword="hello"  # 声明变量
    echo ${dword}  # 输出变量值
@@ -57,7 +57,6 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 
 变量类型
 ^^^^^^^^
-
 
 * **局部变量** - 局部变量是仅在某个脚本内部有效的变量。它们不能被其他的程序和脚本访问。
 * **环境变量** - 环境变量是对当前 shell 会话内所有的程序或脚本都可见的变量。创建它们跟创建局部变量类似，但使用的是 ``export`` 关键字，shell 脚本也可以定义环境变量。
@@ -87,7 +86,10 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 
 `这里 <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html###sect_03_02_04>`_ 有一张更全面的 Bash 环境变量列表。
 
-变量示例源码
+示例源码
 ^^^^^^^^^^^^
+⌨️ 示例源码
 
-**⌨️ 『示例源码』** `variable-demo.sh <https://github.com/dunwu/os-tutorial/tree/master/codes/shell/demos/variable-demo.sh>`_
+.. include:: variable/variable-demo.sh
+   :code:
+

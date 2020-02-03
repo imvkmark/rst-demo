@@ -15,13 +15,13 @@
 
 1、  可以有变量赋值，例如
 
-.. code-block::
+.. code-block:: text
 
    a=10 b=20 export a b
 
 2、  “词”是以空白字符分隔开的，空白字符包括制表符（tab）和空格，例如：
 
-.. code-block::
+.. code-block:: text
 
    ls /tmp
 
@@ -29,13 +29,13 @@
 
 3、可以出现重定向符号，重定向符号是 ``>`` 和 ``<`` ，例如：
 
-.. code-block::
+.. code-block:: text
 
    echo “hello world”> /tmp/log
 
 4、  简单命令结束于控制操作符，控制操作符包括：
 
-.. code-block::
+.. code-block:: text
 
    ||  
    &   
@@ -48,7 +48,7 @@
 
 例如，用户输入：
 
-.. code-block::
+.. code-block:: text
 
    ls /tmp
 
@@ -56,7 +56,7 @@
 
 如果用户输入：
 
-.. code-block::
+.. code-block:: text
 
    echo "100" ; echo "200"
 
@@ -64,7 +64,7 @@
 
 5、  简单命令的第一个词是要执行的命令，其余的词都是这个命令的参数，例如：
 
-.. code-block::
+.. code-block:: text
 
    echo “hello world” echo
 
@@ -79,7 +79,7 @@
 
 例如
 
-.. code-block::
+.. code-block:: text
 
    echo "hello world" | wc –l
 
@@ -102,7 +102,7 @@
 
 例如
 
-.. code-block::
+.. code-block:: text
 
    echo "hello world" | wc –l ; echo “nice to meet you”
 

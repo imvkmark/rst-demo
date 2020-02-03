@@ -50,7 +50,7 @@ Shell 的解释器种类众多，常见的有：
 
 * 指定 bash 解释器
 
-.. code-block::
+.. code-block:: text
 
    #!/bin/bash
 
@@ -58,7 +58,7 @@ Shell 的解释器种类众多，常见的有：
 
    上面的指定解释器的方式是比较常见的，但有时候，你可能也会看到下面的方式：
 
-   .. code-block::
+   .. code-block:: text
 
       #!/usr/bin/env bash
 
@@ -78,7 +78,7 @@ shell 有交互和非交互两种模式。
 
 看到形如下面的东西，说明 shell 处于交互模式下：
 
-.. code-block::
+.. code-block:: text
 
    user@host:~$
 
@@ -96,7 +96,7 @@ shell 有交互和非交互两种模式。
 
 可以使用下面的命令让 shell 以非交互模式运行：
 
-.. code-block::
+.. code-block:: text
 
    sh /path/to/script.sh
    bash /path/to/script.sh
