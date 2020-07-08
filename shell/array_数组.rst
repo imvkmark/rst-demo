@@ -8,7 +8,7 @@ bash 只支持一维数组。
 
 创建数组
 ^^^^^^^^
-
+.. image:: /_static/images/2020/0319/131240.png
 .. code-block:: text
 
    # 创建数组的不同方式
