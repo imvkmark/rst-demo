@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Lang-Shell'
-copyright = '2020, Duoli'
-author = 'Duoli'
+project = 'Program Language Book - 程序基础学习笔记'
+copyright = '2020-2021 @Duoli'
+author = 'Duoli<zhaody901(at)126.com>'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0.0'

@@ -61,7 +61,7 @@
    fi
    # Output: 10 < 20
 
-**:keyboard: 『示例源码』** `if-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/if-demo.sh>`_
+**:keyboard: 『示例源码』** `if.sh <./code/if.sh>`_
 
 ``case``
 ~~~~~~~~~~~~
