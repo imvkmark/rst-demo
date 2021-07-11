@@ -90,6 +90,6 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 ^^^^^^^^^^^^
 ⌨️ 示例源码
 
-.. include:: variable/variable-demo.sh
+.. include:: code/variable-demo.sh
    :code:
 

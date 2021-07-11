@@ -7,6 +7,7 @@ Shell 简介
    :numbered:
 
    shell/readme
+   dart/readme
    
 
 Indices and tables

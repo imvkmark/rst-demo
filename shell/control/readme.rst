@@ -1,4 +1,3 @@
-
 控制语句
 --------
 
@@ -61,7 +60,7 @@
    fi
    # Output: 10 < 20
 
-**:keyboard: 『示例源码』** `if.sh <./code/if.sh>`_
+**:keyboard: 『示例源码』** `if.sh <https://github.com/imvkmark/note/blob/master/shell/control/code/if.sh?plain=1>`_
 
 ``case``
 ~~~~~~~~~~~~

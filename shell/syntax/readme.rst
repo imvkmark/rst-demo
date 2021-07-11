@@ -28,7 +28,7 @@ shell 语法中，注释是特殊的语句，会被 shell 解释器忽略。
 * 单行注释 - 以 ``#`` 开头，到行尾结束。
 * 多行注释 - 以 ``:<<EOF`` 开头，到 ``EOF`` 结束。
 
-.. include:: syntax/comment-demo.sh
+.. include:: code/comment-demo.sh
    :code: sh
 
 echo
@@ -36,7 +36,7 @@ echo
 
 用于字符串的输出。
 
-.. include:: syntax/echo-demo.sh
+.. include:: code/echo-demo.sh
    :code: sh
 
 
@@ -54,7 +54,7 @@ printf 用于格式化输出字符串。
 
 默认，printf 不会像 echo 一样自动添加换行符，如果需要换行可以手动添加 ``\n`` 。
 
-.. include:: syntax/print_f-demo.sh
+.. include:: code/print_f-demo.sh
    :code: sh
 
 
