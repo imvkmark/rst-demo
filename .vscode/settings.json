@@ -1,9 +1,10 @@
 {
     "python.pythonPath": "/usr/local/bin/python3",
-    "restructuredtext.confPath": "${workspaceFolder}",
     "pasteImage.defaultName": "Y/MMDD/HHmmss",
     "pasteImage.prefix": ".. image:: /",
     "pasteImage.path": "${projectRoot}/_static/images/",
     "pasteImage.encodePath": "none",
     "pasteImage.basePath": "${projectRoot}",
+    "restructuredtext.languageServer.disabled": true,
+    "restructuredtext.confPath": "${workspaceFolder}",
 }

@@ -1,4 +1,3 @@
-
 简介
 ----
 
@@ -116,7 +115,7 @@ shell 有交互和非交互两种模式。
 
 这种方式要求脚本文件的第一行必须指明运行该脚本的程序，比如：
 
-.. include:: intro/hello-world.sh
+.. include:: code/hello-world.sh
    :code: sh
 
 上面的例子中，我们使用了一个很有用的命令 ``echo`` 来输出字符串到屏幕上。
