@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# 系统命令输出变量
+#--------------------------------------------
 echo "# 系统命令输出变量 ..... .. ."
 
 # 输出系统命令输出变量
@@ -7,8 +9,10 @@ folder=$(pwd)
 echo "current path: ${folder}"
 # Output : current path: /Users/duoli/.../lang/note
 
-echo "# 系统变量 ..... .. ."
 # 系统变量
+#--------------------------------------------
+echo "# 系统变量 ..... .. ."
+
 echo "UID:$UID"
 echo "LOGNAME:$LOGNAME"
 echo "User:$USER"
