@@ -1,4 +1,3 @@
-
 变量
 ----
 
@@ -8,7 +7,6 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 
 变量命名原则
 ^^^^^^^^^^^^
-
 
 * 命名只能使用英文字母，数字和下划线，首个字符不能以数字开头。
 * 中间不能有空格，可以使用下划线（_）。
@@ -33,27 +31,17 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
 
 使用 readonly 命令可以将变量定义为只读变量，只读变量的值不能被改变。
 
-.. code-block:: sh
-
-   rword="hello"
-   echo ${rword}
-   readonly rword
-   # rword="bye"  # 如果放开注释，执行时会报错
+.. include:: code/readonly.sh
+   :code: sh
 
 删除变量
 ^^^^^^^^
 
 使用 unset 命令可以删除变量。变量被删除后不能再次使用。unset 命令不能删除只读变量。
 
-.. code-block:: sh
+.. include:: code/delete.sh
+   :code: sh
 
-   dword="hello"  # 声明变量
-   echo ${dword}  # 输出变量值
-   # Output: hello
-
-   unset dword    # 删除变量
-   echo ${dword}
-   # Output: （空）
 
 变量类型
 ^^^^^^^^
@@ -83,13 +71,14 @@ Bash 中没有数据类型，bash 中的变量可以保存一个数字、一个�
    * - ``$PS2``
      - 次要系统输入提示符
 
+.. include:: code/env.sh
+   :code: sh
 
-`这里 <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html###sect_03_02_04>`_ 有一张更全面的 Bash 环境变量列表。
 
-示例源码
-^^^^^^^^^^^^
-⌨️ 示例源码
+`这里 <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_04>`_ 有一张更全面的 Bash 环境变量列表。
 
-.. include:: code/variable-demo.sh
-   :code:
 
+直接在文本中使用变量
+^^^^^^^^^^^^^^^^^^^^^^^^
+.. include:: code/cmd.sh
+   :code: sh

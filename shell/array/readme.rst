@@ -31,3 +31,14 @@ bash 只支持一维数组。
 
 .. include:: code/access-mgr.sh
    :code: sh
+
+
+循环读取数组的数据
+^^^^^^^^^^^^^^^^^^^^^^
+
+.. include:: code/list.sh
+   :code: sh
+
+帮助链接
+^^^^^^^^^^^^^^^^^^^^^^
+- `sprintf <https://www.runoob.com/linux/linux-shell-printf.html>`_ 
