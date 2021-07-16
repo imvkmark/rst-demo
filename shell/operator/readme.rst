@@ -13,33 +13,33 @@
    * - 运算符
      - 说明
      - 举例
-   * - +
+   * - ``+``
      - 加法
      - ``expr $x + $y`` 结果为 30。
-   * - -
+   * - ``-``
      - 减法
      - ``expr $x - $y`` 结果为 -10。
-   * - *
+   * - ``*``
      - 乘法
      - ``expr $x * $y`` 结果为 200。
-   * - /
+   * - ``/``
      - 除法
      - ``expr $y / $x`` 结果为 2。
-   * - %
+   * - ``%``
      - 取余
      - ``expr $y % $x`` 结果为 0。
-   * - =
+   * - ``=``
      - 赋值
      - ``x=$y`` 将把变量 y 的值赋给 x。
-   * - ==
+   * - ``==``
      - 相等。用于比较两个数字，相同则返回 true。
      - ``[ $x == $y ]`` 返回 false。
-   * - !=
+   * - ``!=``
      - 不相等。用于比较两个数字，不相同则返回 true。
      - ``[ $x != $y ]`` 返回 true。
 
 
-**注意：**\ 条件表达式要放在方括号之间，并且要有空格，例如: ``[$x==$y]`` 是错误的，必须写成 ``[ $x == $y ]``\ 。
+**注意：** 条件表达式要放在方括号之间，并且要有空格，例如: ``[$x==$y]`` 是错误的，必须写成 ``[ $x == $y ]`` 。
 
 **:keyboard: 『示例源码』** `operator-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo.sh>`_
 
@@ -249,13 +249,9 @@
    * - ``&&``
      - 逻辑的 AND
      - ``[[ ${x} -lt 100 && ${y} -gt 100 ]]`` 返回 false
-   * - `
-     - 
-     - `
+   * - ``||``
      - 逻辑的 OR
-     - `[[ ${x} -lt 100
-     - 
-     - ${y} -gt 100 ]]` 返回 true
+     - ``[[ $a -lt 100 || $b -gt 100 ]]`` 返回 true
 
 
 **:keyboard: 『示例源码』** `operator-demo4.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo4.sh>`_
@@ -315,7 +311,7 @@
      - ``[ $a ]`` 返回 true。
 
 
-**:keyboard: 『示例源码』** `operator-demo5.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo5.sh>`_
+|:keyboard:| `operator-demo5.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo5.sh>`_
 
 .. code-block:: text
 
