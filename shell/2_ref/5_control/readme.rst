@@ -15,7 +15,7 @@
 
 ``if`` 在使用上跟其它语言相同。如果中括号里的表达式为真，那么 ``then`` 和 ``fi`` 之间的代码会被执行。 ``fi`` 标志着条件代码块的结束。同样，可以使用 ``if..else`` 语句 或者 ``if..elif..else`` ，使用起来也很方便。
 
-.. include:: code/operation.sh
+.. include:: code/if.sh
     :code: sh
 
 

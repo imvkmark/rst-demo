@@ -9,8 +9,9 @@ fi
 # Output: 1 -eq 1 result is: true
 
 # 写成多行
-if [[ "abc" -eq "abc" ]]; then
-    echo ""abc" -eq "abc" result is: true"
+var='abc'
+if [[ "${var}" -eq "abc" ]]; then
+    echo "abc -eq abc result is: true"
 fi
 # Output: abc -eq abc result is: true
 

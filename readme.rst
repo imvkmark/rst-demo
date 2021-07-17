@@ -1,14 +1,15 @@
-Shell 简介
+语法学习
 ======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: 目录
-   :numbered:
 
    shell/readme
+   php/readme
    dart/readme
    
+
 
 Indices and tables
 ==================
