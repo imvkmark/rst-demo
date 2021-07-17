@@ -3,8 +3,8 @@
 ################### while 循环输出 0 ~ 9 的平方数 ###################
 x=0
 while [[ ${x} -lt 10 ]]; do
-	echo $((x * x))
-	x=$((x + 1))
+    echo $((x * x))
+    x=$((x + 1))
 done
 #  Output:
 #  0
@@ -20,10 +20,11 @@ done
 
 ################### while 循环输出 0 ~ 9 ###################
 x=0
-while echo ${x}
-[[ ${x} -lt 9 ]]
+while
+    echo ${x}
+    [[ ${x} -lt 9 ]]
 do
-	x=$((x + 1))
+    x=$((x + 1))
 done
 #	Output:
 #	0
@@ -39,13 +40,11 @@ done
 
 ################### while 循环嵌套 for 循环 ###################
 x=5
-while [[ $x -ge 0 ]]
-do
-	echo "Outer loop: $x"
-	for (( y = 1; $y < 3; y ++ ))
-	do
-		z=$[ $x * $y ]
-		echo "Inner loop: $x * $y = $z"
-	done
-	x=$[ $x - 1 ]
+while [[ $x -ge 0 ]]; do
+    echo "Outer loop: $x"
+    for ((y = 1; $y < 3; y++)); do
+        z=$(($x * $y))
+        echo "Inner loop: $x * $y = $z"
+    done
+    x=$(($x - 1))
 done

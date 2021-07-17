@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-################### if 语句 ###################
+# if 语句
+# ----------------------------------------
 # 写成一行
 if [[ 1 -eq 1 ]]; then
     echo "1 -eq 1 result is: true"
@@ -13,7 +14,8 @@ if [[ "abc" -eq "abc" ]]; then
 fi
 # Output: abc -eq abc result is: true
 
-################### if else 语句 ###################
+# if else 语句
+# ----------------------------------------
 if [[ 2 -ne 1 ]]; then
     echo "true"
 else
@@ -21,7 +23,8 @@ else
 fi
 # Output: true
 
-################### if elif else 语句 ###################
+# if elif else 语句
+# ----------------------------------------
 x=10
 y=20
 if [[ ${x} > ${y} ]]; then

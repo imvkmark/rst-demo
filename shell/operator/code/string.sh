@@ -13,13 +13,13 @@ fi
 
 echo "x=${x}, y=${y}"
 
-if [[ ${x} = ${y} ]]; then
+if [[ ${x} = "${y}" ]]; then
     echo "${x} = ${y} : x 等于 y"
 else
     echo "${x} = ${y}: x 不等于 y"
 fi
 
-if [[ ${x} != ${y} ]]; then
+if [[ ${x} != "${y}" ]]; then
     echo "${x} != ${y} : x 不等于 y"
 else
     echo "${x} != ${y}: x 等于 y"
