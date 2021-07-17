@@ -1,11 +1,10 @@
-
 字符串
 ------
 
 单引号和双引号
 ^^^^^^^^^^^^^^
 
-shell 字符串可以用单引号 ``''``\ ，也可以用双引号 ``“”``\ ，也可以不用引号。
+shell 字符串可以用单引号 ``'`` ，也可以用双引号 ``"`` ，也可以不用引号。
 
 
 * 单引号的特点
@@ -23,63 +22,27 @@ shell 字符串可以用单引号 ``''``\ ，也可以用双引号 ``“”``\ �
 拼接字符串
 ^^^^^^^^^^
 
-.. code-block:: text
-
-   # 使用单引号拼接
-   name1='white'
-   str1='hello, '${name1}''
-   str2='hello, ${name1}'
-   echo ${str1}_${str2}
-   # Output:
-   # hello, white_hello, ${name1}
-
-   # 使用双引号拼接
-   name2="black"
-   str3="hello, "${name2}""
-   str4="hello, ${name2}"
-   echo ${str3}_${str4}
-   # Output:
-   # hello, black_hello, black
+.. include:: code/join.sh
+   :code: sh
 
 获取字符串长度
 ^^^^^^^^^^^^^^
 
-.. code-block:: text
+.. include:: code/length.sh
+   :code: sh
 
-   text="12345"
-   echo ${#text}
-   # Output:
-   # 5
 
 截取子字符串
 ^^^^^^^^^^^^
 
-.. code-block:: text
+.. include:: code/sub.sh
+   :code: sh
 
-   text="12345"
-   echo ${text:2:2}
-   # Output:
-   # 34
-
-从第 3 个字符开始，截取 2 个字符
 
 查找子字符串
 ^^^^^^^^^^^^
 
-.. code-block:: text
+.. include:: code/find.sh
+   :code: sh
 
-   #!/usr/bin/env bash
-
-   text="hello"
-   echo `expr index "${text}" ll`
-
-   # Execute: ./str-demo5.sh
-   # Output:
-   # 3
-
-查找 ``ll`` 子字符在 ``hello`` 字符串中的起始位置。
-
-字符串示例源码
-^^^^^^^^^^^^^^
-
-**⌨️ 『示例源码』** `string-demo.sh <https://github.com/dunwu/os-tutorial/tree/master/codes/shell/demos/string-demo.sh>`_
+> mac 下会出现语法错误
