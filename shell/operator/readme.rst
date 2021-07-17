@@ -1,4 +1,3 @@
-
 运算符
 ------
 
@@ -41,48 +40,9 @@
 
 **注意：** 条件表达式要放在方括号之间，并且要有空格，例如: ``[$x==$y]`` 是错误的，必须写成 ``[ $x == $y ]`` 。
 
-**:keyboard: 『示例源码』** `operator-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo.sh>`_
+.. include:: code/math.sh
+   :code: sh
 
-.. code-block:: text
-
-   x=10
-   y=20
-
-   echo "x=${x}, y=${y}"
-
-   val=`expr ${x} + ${y}`
-   echo "${x} + ${y} = $val"
-
-   val=`expr ${x} - ${y}`
-   echo "${x} - ${y} = $val"
-
-   val=`expr ${x} \* ${y}`
-   echo "${x} * ${y} = $val"
-
-   val=`expr ${y} / ${x}`
-   echo "${y} / ${x} = $val"
-
-   val=`expr ${y} % ${x}`
-   echo "${y} % ${x} = $val"
-
-   if [[ ${x} == ${y} ]]
-   then
-     echo "${x} = ${y}"
-   fi
-   if [[ ${x} != ${y} ]]
-   then
-     echo "${x} != ${y}"
-   fi
-
-   #  Execute: ./operator-demo.sh
-   #  Output:
-   #  x=10, y=20
-   #  10 + 20 = 30
-   #  10 - 20 = -10
-   #  10 * 20 = 200
-   #  20 / 10 = 2
-   #  20 % 10 = 0
-   #  10 != 20
 
 关系运算符
 ^^^^^^^^^^
@@ -117,60 +77,8 @@
      - ``[ $a -le $b ]``\ 返回 true。
 
 
-**:keyboard: 『示例源码』** `operator-demo2.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo2.sh>`_
-
-.. code-block:: text
-
-   x=10
-   y=20
-
-   echo "x=${x}, y=${y}"
-
-   if [[ ${x} -eq ${y} ]]; then
-      echo "${x} -eq ${y} : x 等于 y"
-   else
-      echo "${x} -eq ${y}: x 不等于 y"
-   fi
-
-   if [[ ${x} -ne ${y} ]]; then
-      echo "${x} -ne ${y}: x 不等于 y"
-   else
-      echo "${x} -ne ${y}: x 等于 y"
-   fi
-
-   if [[ ${x} -gt ${y} ]]; then
-      echo "${x} -gt ${y}: x 大于 y"
-   else
-      echo "${x} -gt ${y}: x 不大于 y"
-   fi
-
-   if [[ ${x} -lt ${y} ]]; then
-      echo "${x} -lt ${y}: x 小于 y"
-   else
-      echo "${x} -lt ${y}: x 不小于 y"
-   fi
-
-   if [[ ${x} -ge ${y} ]]; then
-      echo "${x} -ge ${y}: x 大于或等于 y"
-   else
-      echo "${x} -ge ${y}: x 小于 y"
-   fi
-
-   if [[ ${x} -le ${y} ]]; then
-      echo "${x} -le ${y}: x 小于或等于 y"
-   else
-      echo "${x} -le ${y}: x 大于 y"
-   fi
-
-   #  Execute: ./operator-demo2.sh
-   #  Output:
-   #  x=10, y=20
-   #  10 -eq 20: x 不等于 y
-   #  10 -ne 20: x 不等于 y
-   #  10 -gt 20: x 不大于 y
-   #  10 -lt 20: x 小于 y
-   #  10 -ge 20: x 小于 y
-   #  10 -le 20: x 小于或等于 y
+.. include:: code/relation.sh
+   :code: sh
 
 布尔运算符
 ^^^^^^^^^^
@@ -194,46 +102,9 @@
      - ``[ $a -lt 20 -a $b -gt 100 ]`` 返回 false。
 
 
-**:keyboard: 『示例源码』** `operator-demo3.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo3.sh>`_
+.. include:: code/bool.sh
+   :code: sh
 
-.. code-block:: text
-
-   x=10
-   y=20
-
-   echo "x=${x}, y=${y}"
-
-   if [[ ${x} != ${y} ]]; then
-      echo "${x} != ${y} : x 不等于 y"
-   else
-      echo "${x} != ${y}: x 等于 y"
-   fi
-
-   if [[ ${x} -lt 100 && ${y} -gt 15 ]]; then
-      echo "${x} 小于 100 且 ${y} 大于 15 : 返回 true"
-   else
-      echo "${x} 小于 100 且 ${y} 大于 15 : 返回 false"
-   fi
-
-   if [[ ${x} -lt 100 || ${y} -gt 100 ]]; then
-      echo "${x} 小于 100 或 ${y} 大于 100 : 返回 true"
-   else
-      echo "${x} 小于 100 或 ${y} 大于 100 : 返回 false"
-   fi
-
-   if [[ ${x} -lt 5 || ${y} -gt 100 ]]; then
-      echo "${x} 小于 5 或 ${y} 大于 100 : 返回 true"
-   else
-      echo "${x} 小于 5 或 ${y} 大于 100 : 返回 false"
-   fi
-
-   #  Execute: ./operator-demo3.sh
-   #  Output:
-   #  x=10, y=20
-   #  10 != 20 : x 不等于 y
-   #  10 小于 100 且 20 大于 15 : 返回 true
-   #  10 小于 100 或 20 大于 100 : 返回 true
-   #  10 小于 5 或 20 大于 100 : 返回 false
 
 逻辑运算符
 ^^^^^^^^^^
@@ -254,34 +125,9 @@
      - ``[[ $a -lt 100 || $b -gt 100 ]]`` 返回 true
 
 
-**:keyboard: 『示例源码』** `operator-demo4.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo4.sh>`_
+.. include:: code/xor.sh
+   :code: sh
 
-.. code-block:: text
-
-   x=10
-   y=20
-
-   echo "x=${x}, y=${y}"
-
-   if [[ ${x} -lt 100 && ${y} -gt 100 ]]
-   then
-      echo "${x} -lt 100 && ${y} -gt 100 返回 true"
-   else
-      echo "${x} -lt 100 && ${y} -gt 100 返回 false"
-   fi
-
-   if [[ ${x} -lt 100 || ${y} -gt 100 ]]
-   then
-      echo "${x} -lt 100 || ${y} -gt 100 返回 true"
-   else
-      echo "${x} -lt 100 || ${y} -gt 100 返回 false"
-   fi
-
-   #  Execute: ./operator-demo4.sh
-   #  Output:
-   #  x=10, y=20
-   #  10 -lt 100 && 20 -gt 100 返回 false
-   #  10 -lt 100 || 20 -gt 100 返回 true
 
 字符串运算符
 ^^^^^^^^^^^^
@@ -311,53 +157,9 @@
      - ``[ $a ]`` 返回 true。
 
 
-|:keyboard:| `operator-demo5.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo5.sh>`_
+.. include:: code/string.sh
+   :code: sh
 
-.. code-block:: text
-
-   x="abc"
-   y="xyz"
-
-   echo "x=${x}, y=${y}"
-
-   if [[ ${x} = ${y} ]]; then
-      echo "${x} = ${y} : x 等于 y"
-   else
-      echo "${x} = ${y}: x 不等于 y"
-   fi
-
-   if [[ ${x} != ${y} ]]; then
-      echo "${x} != ${y} : x 不等于 y"
-   else
-      echo "${x} != ${y}: x 等于 y"
-   fi
-
-   if [[ -z ${x} ]]; then
-      echo "-z ${x} : 字符串长度为 0"
-   else
-      echo "-z ${x} : 字符串长度不为 0"
-   fi
-
-   if [[ -n "${x}" ]]; then
-      echo "-n ${x} : 字符串长度不为 0"
-   else
-      echo "-n ${x} : 字符串长度为 0"
-   fi
-
-   if [[ ${x} ]]; then
-      echo "${x} : 字符串不为空"
-   else
-      echo "${x} : 字符串为空"
-   fi
-
-   #  Execute: ./operator-demo5.sh
-   #  Output:
-   #  x=abc, y=xyz
-   #  abc = xyz: x 不等于 y
-   #  abc != xyz : x 不等于 y
-   #  -z abc : 字符串长度不为 0
-   #  -n abc : 字符串长度不为 0
-   #  abc : 字符串不为空
 
 文件测试运算符
 ^^^^^^^^^^^^^^
@@ -413,54 +215,5 @@
      - ``[ -e $file ]`` 返回 true。
 
 
-**:keyboard: 『示例源码』** `operator-demo6.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/operator/operator-demo6.sh>`_
-
-.. code-block:: text
-
-   file="/etc/hosts"
-
-   if [[ -r ${file} ]]; then
-      echo "${file} 文件可读"
-   else
-      echo "${file} 文件不可读"
-   fi
-   if [[ -w ${file} ]]; then
-      echo "${file} 文件可写"
-   else
-      echo "${file} 文件不可写"
-   fi
-   if [[ -x ${file} ]]; then
-      echo "${file} 文件可执行"
-   else
-      echo "${file} 文件不可执行"
-   fi
-   if [[ -f ${file} ]]; then
-      echo "${file} 文件为普通文件"
-   else
-      echo "${file} 文件为特殊文件"
-   fi
-   if [[ -d ${file} ]]; then
-      echo "${file} 文件是个目录"
-   else
-      echo "${file} 文件不是个目录"
-   fi
-   if [[ -s ${file} ]]; then
-      echo "${file} 文件不为空"
-   else
-      echo "${file} 文件为空"
-   fi
-   if [[ -e ${file} ]]; then
-      echo "${file} 文件存在"
-   else
-      echo "${file} 文件不存在"
-   fi
-
-   #  Execute: ./operator-demo6.sh
-   #  Output:(根据文件的实际情况，输出结果可能不同)
-   #  /etc/hosts 文件可读
-   #  /etc/hosts 文件可写
-   #  /etc/hosts 文件不可执行
-   #  /etc/hosts 文件为普通文件
-   #  /etc/hosts 文件不是个目录
-   #  /etc/hosts 文件不为空
-   #  /etc/hosts 文件存在
+.. include:: code/file.sh
+   :code: sh
