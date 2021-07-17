@@ -74,7 +74,8 @@ Bash 中有四种循环： ``for`` ， ``while`` ， ``until`` 和 ``select`` �
    done
    # 将 /home/zp 目录下所有 sh 文件拷贝到 /home/zp/scripts
 
-**:keyboard: 『示例源码』** `for-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/for-demo.sh>`_
+.. include:: code/for.sh
+    :code: sh
 
 ``while`` 循环
 ~~~~~~~~~~~~~~~~~
@@ -92,48 +93,17 @@ Bash 中有四种循环： ``for`` ， ``while`` ， ``until`` 和 ``select`` �
 
 比如下面这个例子：
 
-.. code-block:: text
-
-   ### 0到9之间每个数的平方
-   x=0
-   while [[ ${x} -lt 10 ]]; do
-     echo $((x * x))
-     x=$((x + 1))
-   done
-   #  Output:
-   #  0
-   #  1
-   #  4
-   #  9
-   #  16
-   #  25
-   #  36
-   #  49
-   #  64
-   #  81
-
-**:keyboard: 『示例源码』** `while-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/while-demo.sh>`_
+.. include:: code/while.sh
+    :code: sh
 
 ``until`` 循环
 ~~~~~~~~~~~~~~~~~
 
 ``until`` 循环跟 ``while`` 循环正好相反。它跟 ``while`` 一样也需要检测一个测试条件，但不同的是，只要该条件为 *假* 就一直执行循环：
 
-.. code-block:: text
+.. include:: code/until.sh
+    :code: sh
 
-   x=0
-   until [[ ${x} -ge 5 ]]; do
-     echo ${x}
-     x=`expr ${x} + 1`
-   done
-   #  Output:
-   #  0
-   #  1
-   #  2
-   #  3
-   #  4
-
-**:keyboard: 『示例源码』** `until-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/until-demo.sh>`_
 
 ``select`` 循环
 ~~~~~~~~~~~~~~~~~~
@@ -151,22 +121,8 @@ Bash 中有四种循环： ``for`` ， ``while`` ， ``until`` 和 ``select`` �
 
 一个可能的实例可能会是这样：
 
-.. code-block:: text
-
-   #!/usr/bin/env bash
-
-   PS3="Choose the package manager: "
-   select ITEM in bower npm gem pip
-   do
-   echo -n "Enter the package name: " && read PACKAGE
-   case ${ITEM} in
-     bower) bower install ${PACKAGE} ;;
-     npm) npm install ${PACKAGE} ;;
-     gem) gem install ${PACKAGE} ;;
-     pip) pip install ${PACKAGE} ;;
-   esac
-   break # 避免无限循环
-   done
+.. include:: code/select.sh
+    :code: sh
 
 这个例子，先询问用户他想使用什么包管理器。接着，又询问了想安装什么包，最后执行安装操作。
 
@@ -182,7 +138,6 @@ Bash 中有四种循环： ``for`` ， ``while`` ， ``until`` 和 ``select`` �
    Choose the package manager: 2
    Enter the package name: gitbook-cli
 
-**:keyboard: 『示例源码』** `select-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/select-demo.sh>`_
 
 ``break`` 和 ``continue``
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -196,35 +151,10 @@ Bash 中有四种循环： ``for`` ， ``while`` ， ``until`` 和 ``select`` �
    ``continue`` 语句用来跳过某次迭代。
 
 
-**:keyboard: 『示例源码』** `break-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/break-demo.sh>`_
+.. include:: code/break.sh
+    :code: sh
 
-.. code-block:: text
 
-   # 查找 10 以内第一个能整除 2 和 3 的正整数
-   i=1
-   while [[ ${i} -lt 10 ]]; do
-     if [[ $((i % 3)) -eq 0 ]] && [[ $((i % 2)) -eq 0 ]]; then
-       echo ${i}
-       break;
-     fi
-     i=`expr ${i} + 1`
-   done
-   # Output: 6
+.. include:: code/continue.sh
+    :code: sh
 
-**:keyboard: 『示例源码』** `continue-demo.sh <https://github.com/dunwu/os-tutorial/blob/master/codes/shell/demos/statement/continue-demo.sh>`_
-
-.. code-block:: text
-
-   # 打印10以内的奇数
-   for (( i = 0; i < 10; i ++ )); do
-     if [[ $((i % 2)) -eq 0 ]]; then
-       continue;
-     fi
-     echo ${i}
-   done
-   #  Output:
-   #  1
-   #  3
-   #  5
-   #  7
-   #  9
