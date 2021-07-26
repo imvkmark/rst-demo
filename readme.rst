@@ -1,17 +1,17 @@
-语法学习
+Shell 学习笔记
 ======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: 目录
 
-   shell/readme
-   php/readme
-   dart/readme
+   1_intro/readme
+   2_ref/readme
+   3_command/readme
    
 
 
-Indices and tables
+索引和搜索
 ==================
 
 * :ref:`genindex`

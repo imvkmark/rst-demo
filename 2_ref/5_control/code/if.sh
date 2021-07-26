@@ -2,11 +2,35 @@
 
 # if 语句
 # ----------------------------------------
-# 写成一行
+# 一行的表达式
 if [[ 1 -eq 1 ]]; then
     echo "1 -eq 1 result is: true"
 fi
+
+# Test 方法
+if test 1 -eq 1; then
+    echo "1 -eq 1 result is: true"
+fi
+
+# 换行写法
+if
+    1 -eq 1
+then
+    echo "1 -eq 1 result is: true"
+fi
 # Output: 1 -eq 1 result is: true
+
+# if 快捷写法
+# ----------------------------------------
+[ 1 -eq 1 ] && echo '1 = 1'
+
+# 条件是 0 也会输出数据
+# if [ i –ne 0 ] 可以替代为 0 的情况
+# ----------------------------------------
+i=0
+if [ $i ]; then
+    echo "即使是 0 , 这里也会输出"
+fi
 
 # 写成多行
 var='abc'

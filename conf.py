@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Program Language Book - 程序基础学习笔记'
+project = 'Shell Note Book - Shell 学习笔记'
 copyright = '2020-2021 @Duoli'
 author = 'Duoli<zhaody901(at)126.com>'
 
@@ -32,8 +32,7 @@ release = '1.0.0'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'recommonmark',
-    'sphinxemoji.sphinxemoji',
+    'recommonmark'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -72,4 +71,3 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-sphinxemoji_style = 'twemoji'
