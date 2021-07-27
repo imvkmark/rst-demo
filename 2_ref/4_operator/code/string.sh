@@ -13,6 +13,13 @@ fi
 
 echo "x=${x}, y=${y}"
 
+# 这里比较的是 x (字符串) 和 y (字符串)
+if [ x = y ]; then
+    echo "x = y : x 等于 y"
+else
+    echo "x = y: x 不等于 y"
+fi
+
 if [[ ${x} = "${y}" ]]; then
     echo "${x} = ${y} : x 等于 y"
 else

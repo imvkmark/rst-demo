@@ -217,3 +217,15 @@
 
 .. include:: code/file.sh
    :code: sh
+
+
+``!`` 运算符
+^^^^^^^^^^^^^^
+
+.. include:: code/not.sh
+   :code: sh
+
+
+参考文章
+
+- `shell编程——if语句 if -z -n -f -eq -ne -lt <https://www.cnblogs.com/myitm/archive/2012/07/05/2577416.html>`_ 。

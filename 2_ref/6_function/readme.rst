@@ -82,3 +82,10 @@ bash 函数定义语法如下：
 * `shellcheck <https://github.com/koalaman/shellcheck>`_ 一个静态 shell 脚本分析工具，本质上是 bash／sh／zsh 的 lint。
 
 最后，Stack Overflow 上 `bash 标签下 <https://stackoverflow.com/questions/tagged/bash>`_ 有很多你可以学习的问题，当你遇到问题时，也是一个提问的好地方。
+
+
+运行结果
+^^^^^^^^^^^^
+
+.. include:: code/result.sh
+    :code: sh
