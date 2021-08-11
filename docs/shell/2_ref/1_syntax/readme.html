@@ -1,0 +1,424 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>基本语法 &mdash; Program Language Book - 程序基础学习笔记 1.0.0 文档</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/twemoji.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js"></script>
+        <script src="../../../_static/twemoji.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="索引" href="../../../genindex.html" />
+    <link rel="search" title="搜索" href="../../../search.html" />
+    <link rel="next" title="类型" href="../2_types/readme.html" />
+    <link rel="prev" title="基本语法" href="../readme.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../readme.html" class="icon icon-home"> Program Language Book - 程序基础学习笔记
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">目录</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../readme.html">Shell 语法学习</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../1_intro/readme.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../readme.html">基本语法</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">基本语法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">解释器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">注释</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#echo">echo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#printf">printf</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../2_types/readme.html">类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../3_variables/readme.html">变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../4_operator/readme.html">运算符</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../5_control/readme.html">控制语句</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../6_function/readme.html">函数</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../3_command/readme.html">命令</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dart/readme.html">学习进度</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../readme.html">Program Language Book - 程序基础学习笔记</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../readme.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../readme.html">Shell 语法学习</a> &raquo;</li>
+        
+          <li><a href="../readme.html">基本语法</a> &raquo;</li>
+        
+      <li>基本语法</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/shell/2_ref/1_syntax/readme.rst.txt" rel="nofollow"> 查看页面源码</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>基本语法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<div class="section" id="id2">
+<h2>解释器<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>前面虽然两次提到了 <code class="docutils literal notranslate"><span class="pre">#!</span></code> ，但是本着重要的事情说三遍的精神，这里再强调一遍：</p>
+<p>在 shell 脚本， <code class="docutils literal notranslate"><span class="pre">#!</span></code> 告诉系统其后路径所指定的程序即是解释此脚本文件的 Shell 解释器。 <code class="docutils literal notranslate"><span class="pre">#!</span></code> 被称作 <a class="reference external" href="https://zh.wikipedia.org/wiki/Shebang">shebang（也称为 Hashbang ）</a> 。</p>
+<p><code class="docutils literal notranslate"><span class="pre">#!</span></code> 决定了脚本可以像一个独立的可执行文件一样执行，而不用在终端之前输入 <code class="docutils literal notranslate"><span class="pre">sh</span></code> , <code class="docutils literal notranslate"><span class="pre">bash</span></code> , <code class="docutils literal notranslate"><span class="pre">python</span></code> , <code class="docutils literal notranslate"><span class="pre">php</span></code> 等。</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># 以下两种方式都可以指定 shell 解释器为 bash，第二种方式更好</span>
+<span class="c1">#!/bin/bash</span>
+<span class="c1">#!/usr/bin/env bash</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>注释<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>注释可以说明你的代码是什么作用，以及为什么这样写。</p>
+<p>shell 语法中，注释是特殊的语句，会被 shell 解释器忽略。</p>
+<ul class="simple">
+<li><p>单行注释 - 以 <code class="docutils literal notranslate"><span class="pre">#</span></code> 开头，到行尾结束。</p></li>
+<li><p>多行注释 - 以 <code class="docutils literal notranslate"><span class="pre">:&lt;&lt;EOF</span></code> 开头，到 <code class="docutils literal notranslate"><span class="pre">EOF</span></code> 结束。</p></li>
+</ul>
+<div class="code sh highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># shell 注释示例</span>
+
+<span class="c1"># echo &#39;这是单行注释&#39;</span>
+
+<span class="c1"># 这是分割线 ..... .. .</span>
+
+<span class="p">:</span> <span class="o">&lt;&lt;</span> <span class="n">EOF</span>
+<span class="n">echo</span> <span class="s1">&#39;这是多行注释&#39;</span>
+<span class="n">echo</span> <span class="s1">&#39;这是多行注释&#39;</span>
+<span class="n">echo</span> <span class="s1">&#39;这是多行注释&#39;</span>
+<span class="n">EOF</span>
+
+<span class="c1"># Output: null</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="echo">
+<h2>echo<a class="headerlink" href="#echo" title="永久链接至标题">¶</a></h2>
+<p>用于字符串的输出。</p>
+<div class="code sh highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># 输出普通字符串</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">echo</span> <span class="s2">&quot;hello, world&quot;</span>
+
+<span class="c1"># 输出含变量的字符串</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">name</span><span class="o">=</span><span class="s2">&quot;duoli&quot;</span>
+<span class="n">echo</span> <span class="s2">&quot;hello, </span><span class="se">\&quot;</span><span class="s2">$</span><span class="si">{name}</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
+<span class="c1"># Output: hello, &quot;duoli&quot;</span>
+
+<span class="c1"># 输出含换行符的字符串</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">echo</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;YES</span><span class="se">\n</span><span class="s2">NO&quot;</span> <span class="c1"># -e 开启转义</span>
+<span class="c1">#  Output:</span>
+<span class="c1">#  YES</span>
+<span class="c1">#  NO</span>
+
+<span class="n">echo</span> <span class="s2">&quot;YES&quot;</span>
+<span class="n">echo</span> <span class="s2">&quot;NO&quot;</span>
+<span class="c1">#  Output:</span>
+<span class="c1">#  YES</span>
+<span class="c1">#  NO</span>
+
+<span class="n">echo</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;YES\c&quot;</span> <span class="c1"># -e 开启转义 \c 不换行</span>
+<span class="n">echo</span> <span class="s2">&quot;NO&quot;</span>
+<span class="c1">#  Output:</span>
+<span class="c1">#  YESNO</span>
+</pre></div>
+</div>
+<p>输出到重定向文件</p>
+<div class="code sh highlight-default notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/env bash
+
+# 输出重定向到文件
+# 输出到 ./output.txt 文件中
+#--------------------------------------------
+work_path=$(cd &quot;$(dirname &quot;$0&quot;)&quot; &amp;&amp; pwd)
+echo &quot;test&quot; &gt;&quot;${work_path}/_output.tmp&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="printf">
+<h2>printf<a class="headerlink" href="#printf" title="永久链接至标题">¶</a></h2>
+<p>printf 用于格式化输出字符串。</p>
+<p>默认，printf 不会像 echo 一样自动添加换行符，如果需要换行可以手动添加 <code class="docutils literal notranslate"><span class="pre">\n</span></code> 。</p>
+<div class="code sh highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/env bash</span>
+
+<span class="c1"># 单引号</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">printf</span> <span class="s1">&#39;</span><span class="si">%d</span><span class="s1"> </span><span class="si">%s</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="mi">1</span> <span class="s2">&quot;abc&quot;</span>
+<span class="c1">#  Output:1 abc</span>
+
+<span class="c1"># 双引号</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">printf</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2"> </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="mi">1</span> <span class="s2">&quot;abc&quot;</span>
+<span class="c1">#  Output:1 abc</span>
+
+<span class="c1"># 无引号</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">printf</span> <span class="o">%</span><span class="n">s</span> <span class="n">abcdef</span>
+<span class="n">printf</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="c1">#  Output: abcdef(并不会换行)</span>
+
+<span class="c1"># 格式只指定了一个参数，但多出的参数仍然会按照该格式输出</span>
+<span class="c1"># 但是不建议传递多个参数, 这样会让大家认为你没有控制力</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">printf</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="n">abc</span> <span class="k">def</span>
+<span class="c1">#  Output:</span>
+<span class="c1">#  abc</span>
+<span class="c1">#  def</span>
+
+<span class="n">printf</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="s2"> </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">e</span> <span class="n">f</span> <span class="n">g</span> <span class="n">h</span> <span class="n">i</span> <span class="n">j</span>
+<span class="c1">#  Output:</span>
+<span class="c1">#  a b c</span>
+<span class="c1">#  d e f</span>
+<span class="c1">#  g h i</span>
+<span class="c1">#  j</span>
+
+<span class="c1"># 如果没有参数，那么 %s 用 NULL 代替，%d 用 0 代替</span>
+<span class="n">printf</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> and </span><span class="si">%d</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span>
+<span class="c1">#  Output:</span>
+<span class="c1">#   and 0</span>
+
+<span class="c1"># 格式化输出</span>
+<span class="c1">#--------------------------------------------</span>
+<span class="n">printf</span> <span class="s2">&quot;</span><span class="si">%-10s</span><span class="s2"> </span><span class="si">%-8s</span><span class="s2"> </span><span class="si">%-4s</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="n">姓名</span> <span class="n">性别</span> <span class="n">体重kg</span>
+<span class="n">printf</span> <span class="s2">&quot;</span><span class="si">%-10s</span><span class="s2"> </span><span class="si">%-8s</span><span class="s2"> </span><span class="si">%-4.2f</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="n">巧笑</span> <span class="n">女</span> <span class="mf">47.5210</span>
+<span class="n">printf</span> <span class="s2">&quot;</span><span class="si">%-10s</span><span class="s2"> </span><span class="si">%-8s</span><span class="s2"> </span><span class="si">%-4.2f</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="n">乾槑</span> <span class="n">男</span> <span class="mf">66.5432</span>
+<span class="c1">#  Output:</span>
+<span class="c1"># 姓名     性别   体重kg</span>
+<span class="c1"># 巧笑     女      47.52</span>
+<span class="c1"># 乾槑     男      66.54</span>
+</pre></div>
+</div>
+<div class="section" id="id4">
+<h3>printf 的转义符<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>序列</p></th>
+<th class="head"><p>说明</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\a</span></code></p></td>
+<td><p>警告字符，通常为 ASCII 的 BEL 字符</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\b</span></code></p></td>
+<td><p>后退</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\c</span></code></p></td>
+<td><p>抑制（不显示）输出结果中任何结尾的换行字符（只在%b 格式指示符控制下的参数字符串中有效），而且，任何留在参数里的字符、任何接下来的参数以及任何留在格式字符串中的字符，都被忽略</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\f</span></code></p></td>
+<td><p>换页（formfeed）</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\n</span></code></p></td>
+<td><p>换行</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\r</span></code></p></td>
+<td><p>回车（Carriage return）</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\t</span></code></p></td>
+<td><p>水平制表符</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\v</span></code></p></td>
+<td><p>垂直制表符</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\\</span></code></p></td>
+<td><p>一个字面上的反斜杠字符</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">\ddd</span></code></p></td>
+<td><p>表示 1 到 3 位数八进制值的字符。仅在格式字符串中有效</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">\0ddd</span></code></p></td>
+<td><p>表示 1 到 3 位的八进制值字符</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../2_types/readme.html" class="btn btn-neutral float-right" title="类型" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../readme.html" class="btn btn-neutral float-left" title="基本语法" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; 版权所有 2020-2021 @Duoli.
+
+    </p>
+  </div>
+    
+    
+    
+    利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
